@@ -12,7 +12,7 @@ Permite gestionar de manera eficiente a los pacientes de un consultorio, junto c
 
 • Gestión de pacientes (agregar, eliminar, listar, obtener detalles).
 
-•  Gestión de visitas (agregar, eliminar, listar, obtener detalles).
+• Gestión de visitas (agregar, eliminar, listar, obtener detalles).
 
 # Arquitectura:
 ### Servicios:
