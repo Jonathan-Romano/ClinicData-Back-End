@@ -26,32 +26,6 @@ La API se divide en dos servicios principales:
 ---
 ### Servicio de productos:
 
-#### • Obtener Paciente por ID
-
-Peticion:
-```
-GET  “/api/patient/{id}”
-```
->Descripción: Este endpoint devuelve los detalles de un producto específico usando su ID..*
-
-Ejemplo:
-
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/product-service/product-service-product-1.jpg)
-
---
-#### • Listar Pacientes:
-
-Peticion:
-```
-GET  “/api/patient/list”
-```
->Descripción: Este endpoint devuelve una lista de todos los paciente disponibles en la plataforma..
-
-Ejemplo:
-
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/product-service/product-service-product-1list.jpg)
---
-
 #### •  Crear Paciente:
 
 Peticion:
@@ -62,7 +36,37 @@ POST  “/patient/create”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/product-service/product-service-product-create.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/patient/patient-create.jpg)
+--
+
+#### • Obtener Paciente por ID
+
+Peticion:
+```
+GET  “/api/patient/{id}”
+```
+>Descripción: Este endpoint devuelve los detalles de un producto específico usando su ID..*
+
+Ejemplo:
+
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/patient/patient-id.jpg)
+>Descripción: Paciente sin visitas realizadas
+
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/patient/patient-id-with-visit.jpg)
+>Descripción: Paciente con una visita realizada
+--
+>
+#### • Listar Pacientes:
+
+Peticion:
+```
+GET  “/api/patient/list”
+```
+>Descripción: Este endpoint devuelve una lista de todos los paciente disponibles en la plataforma..
+
+Ejemplo:
+
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/patient/patient-list.jpg)
 --
 
 #### •  Editar Paciente:
@@ -75,7 +79,7 @@ PUT  “/api/patient/edit/{id}”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/product-service/product-service-product-edit.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/patient/patient-edit.jpg)
 --
 
 #### • Eliminar Paciente:
@@ -88,7 +92,7 @@ GET  “/api/patient/delete/{id}”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/product-service/product-service-product-delete.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/patient/patient-delete.jpg)
 --
 
 #### • Buscar Paciente:
@@ -101,7 +105,7 @@ GET  “/api/patient/search?name={nombre del paciente}”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/product-service/product-service-product-delete.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/patient/patient-search.jpg)
 
 ---
 ### Servicio de Visitas:
@@ -116,7 +120,7 @@ GET  “/api/visit/{id}”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/cart-service/cart-service-cart-1.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/visit/visit-id.jpg)
 --
 
 #### • Listar Visitas:
@@ -129,7 +133,7 @@ GET  “/api/visit/list”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/cart-service/cart-service-cart-list.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/visit/visit-list.jpg)
 --
 
 #### • Crear Visita:
@@ -142,7 +146,20 @@ POST  “/api/visit/create”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/cart-service/cart-service-cart-create.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/visit/visit-create.jpg)
+--
+
+#### •  Editar Visita:
+
+Peticion:
+```
+GET  “/api/edit/{id}”
+```
+>Descripción: Este endpoint permite editar una visita por su ID.
+
+Ejemplo:
+
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/visit/visit-edit.jpg)
 --
 
 #### •  Eliminar Visitas:
@@ -155,5 +172,5 @@ GET  “/api/visit/{id}”
 
 Ejemplo:
 
-![](https://github.com/Jonathan-Romano/TechnoMist-Back-End/blob/master/public/cart-service/cart-service-cart-delete.jpg)
+![](https://github.com/Jonathan-Romano/ClinicData-Back-End/blob/master/src/main/resources/static/visit/visit-delete.jpg)
 --
