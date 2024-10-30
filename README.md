@@ -86,7 +86,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/patient/delete/{id}”
+DELETE  “/patient/delete/{id}”
 ```
 >Descripción: Este endpoint elimina un paciente por su ID.
 
@@ -153,7 +153,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/edit/{id}”
+PUT  “/edit/{id}”
 ```
 >Descripción: Este endpoint permite editar una visita por su ID.
 
@@ -166,7 +166,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/visit/{id}”
+DELETE  “/visit/{id}”
 ```
 >Descripción: Este endpoint elimina una visita por su ID.
 
