@@ -43,7 +43,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/patient/{id}”
+GET  “/patient/{id}”
 ```
 >Descripción: Este endpoint devuelve los detalles de un producto específico usando su ID..*
 
@@ -60,7 +60,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/patient/list”
+GET  “/patient/list”
 ```
 >Descripción: Este endpoint devuelve una lista de todos los paciente disponibles en la plataforma..
 
@@ -73,7 +73,7 @@ Ejemplo:
 
 Peticion:
 ```
-PUT  “/api/patient/edit/{id}”
+PUT  “/patient/edit/{id}”
 ```
 >Descripción: Este endpoint permite editar los detalles de un paciente existente.
 
@@ -86,7 +86,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/patient/delete/{id}”
+GET  “/patient/delete/{id}”
 ```
 >Descripción: Este endpoint elimina un paciente por su ID.
 
@@ -99,7 +99,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/patient/search?name={nombre del paciente}”
+GET  “/patient/search?name={nombre del paciente}”
 ```
 >Descripción: Este endpoint devuelve el paciente que coincide con el nombre buscado.
 
@@ -114,7 +114,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/visit/{id}”
+GET  “/visit/{id}”
 ```
 >Descripción: Este endpoint devuelve los detalles de una visita.
 
@@ -127,7 +127,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/visit/list”
+GET  “/visit/list”
 ```
 >Descripción:  Este endpoint devuelve una lista de todos las visitas.
 
@@ -140,7 +140,7 @@ Ejemplo:
 
 Peticion:
 ```
-POST  “/api/visit/create”
+POST  “/visit/create”
 ```
 >Descripción: Este endpoint crea una nueva visita.
 
@@ -153,7 +153,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/edit/{id}”
+GET  “/edit/{id}”
 ```
 >Descripción: Este endpoint permite editar una visita por su ID.
 
@@ -166,7 +166,7 @@ Ejemplo:
 
 Peticion:
 ```
-GET  “/api/visit/{id}”
+GET  “/visit/{id}”
 ```
 >Descripción: Este endpoint elimina una visita por su ID.
 
