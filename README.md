@@ -153,7 +153,7 @@ Ejemplo:
 
 Peticion:
 ```
-PUT  “/edit/{id}”
+PUT  “/visit/edit/{id}”
 ```
 >Descripción: Este endpoint permite editar una visita por su ID.
 
@@ -166,7 +166,7 @@ Ejemplo:
 
 Peticion:
 ```
-DELETE  “/visit/{id}”
+DELETE  “/visit/delete/{id}”
 ```
 >Descripción: Este endpoint elimina una visita por su ID.
 
