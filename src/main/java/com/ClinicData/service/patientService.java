@@ -42,20 +42,21 @@ public class patientService implements IPatientService{
     }
 
     @Override
-    public Patient editPatient(Long id,Patient patient) {
+    public Patient editPatient(Long id, Patient patient) {
         Patient patientEdit = this.getPatient(id);
-        patientEdit = new Patient(
-                id,
-                patient.getName(),
-                patient.getLastName(),
-                patient.getEmail(),
-                patient.getPhone(),
-                patient.getDni(),
-                patient.getVisitList()
-        );
+
+        if (patientEdit == null) {
+            return null;
+        }
+
+        patientEdit.setName(patient.getName());
+        patientEdit.setLastName(patient.getLastName());
+        patientEdit.setEmail(patient.getEmail());
+        patientEdit.setPhone(patient.getPhone());
+        patientEdit.setDni(patient.getDni());
 
         patientRep.save(patientEdit);
-        return this.getPatient(id);
+        return patientEdit;
     }
 
     @Override

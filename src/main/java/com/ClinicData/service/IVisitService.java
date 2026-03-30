@@ -10,7 +10,7 @@ public interface IVisitService {
 
     public List<Visit> getVisits();
 
-    public Long saveVisit(Visit visit);
+    Long saveVisit(Long patientId, Visit visit);
 
     public Visit editVisit(Long id, Visit visit);
 
