@@ -1,9 +1,12 @@
 package com.ClinicData.controller;
 
+import com.ClinicData.dto.PatientResponseDTO;
 import com.ClinicData.model.Patient;
+import com.ClinicData.mapper.PatientMapper;
 import com.ClinicData.model.Visit;
 import com.ClinicData.service.IPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,16 +19,20 @@ public class patientController {
     public IPatientService patientServ;
 
     @GetMapping("/{id}")
-    public Patient getPatient(@PathVariable Long id) {
-        return patientServ.getPatient(id);
+    public ResponseEntity<PatientResponseDTO> getPatientById(@PathVariable Long id) {
+        Patient patient = patientServ.getPatient(id);
+        return ResponseEntity.ok(PatientMapper.toDto(patient));
     }
     @GetMapping
     public Patient getPatientDni( @RequestParam Long dni) {
         return patientServ.getPatientByDNI(dni);
     }
     @GetMapping("/list")
-    public List<Patient> getPatientsList() {
-        return patientServ.getPatients();
+    public List<PatientResponseDTO> getPatients() {
+        return patientServ.getPatients()
+                .stream()
+                .map(PatientMapper::toDto)
+                .toList();
     }
 
     @GetMapping("/search")
