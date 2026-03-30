@@ -47,7 +47,7 @@ public class patientController {
             @RequestParam(required = false) String name,
             @RequestParam(required = false) Long dni) {
 
-        return patientServ.findPatientByNameDni(name != null ? name : "", dni)
+        return patientServ.findPatientByNameDni(name, dni)
                 .stream()
                 .map(PatientMapper::toDto)
                 .toList();

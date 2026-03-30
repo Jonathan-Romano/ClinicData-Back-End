@@ -14,6 +14,6 @@ public interface IPatientsRepository extends JpaRepository<Patient, Long> {
     @Query("SELECT p FROM Patient p WHERE p.dni = :dni")
     Patient findByDni(Long dni);
 
-    @Query("SELECT p FROM Patient p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR p.dni = :dni")
-    List<Patient> findPatientsByNameOrDni(@Param("searchTerm") String searchTerm, @Param("dni") Long dni);
+    @Query("SELECT p FROM Patient p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :name, '%'))")
+    List<Patient> findByNameContaining(@Param("name") String name);
 }

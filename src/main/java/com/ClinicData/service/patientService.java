@@ -67,8 +67,17 @@ public class patientService implements IPatientService{
     }
 
     @Override
-    public List<Patient> findPatientByNameDni(String searchTerm, Long dni) {
-        return patientRep.findPatientsByNameOrDni(searchTerm, dni);
+    public List<Patient> findPatientByNameDni(String name, Long dni) {
+        if (dni != null) {
+            Patient patient = patientRep.findByDni(dni);
+            return patient != null ? List.of(patient) : List.of();
+        }
+
+        if (name != null && !name.trim().isEmpty()) {
+            return patientRep.findByNameContaining(name.trim());
+        }
+
+        return patientRep.findAll();
     }
 
 }
