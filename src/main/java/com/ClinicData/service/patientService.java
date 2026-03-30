@@ -50,7 +50,7 @@ public class patientService implements IPatientService{
                 patient.getLastName(),
                 patient.getEmail(),
                 patient.getPhone(),
-                patient.getDNI(),
+                patient.getDni(),
                 patient.getVisitList()
         );
 
