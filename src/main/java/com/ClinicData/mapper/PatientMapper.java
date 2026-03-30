@@ -22,7 +22,7 @@ public class PatientMapper {
                 patient.getLastName(),
                 patient.getEmail(),
                 patient.getPhone(),
-                patient.getDNI(),
+                patient.getDni(),
                 visits
         );
     }
