@@ -24,9 +24,16 @@ public class patientController {
         return ResponseEntity.ok(PatientMapper.toDto(patient));
     }
     @GetMapping
-    public Patient getPatientDni( @RequestParam Long dni) {
-        return patientServ.getPatientByDNI(dni);
+    public ResponseEntity<PatientResponseDTO> getPatientDni(@RequestParam Long dni) {
+        Patient patient = patientServ.getPatientByDNI(dni);
+
+        if (patient == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(PatientMapper.toDto(patient));
     }
+
     @GetMapping("/list")
     public List<PatientResponseDTO> getPatients() {
         return patientServ.getPatients()
@@ -36,21 +43,27 @@ public class patientController {
     }
 
     @GetMapping("/search")
-    public List<Patient> getPatientListByNameDni(@RequestParam(required = false) String name,
-                                                 @RequestParam(required = false) Long dni) {
-        return patientServ.findPatientByNameDni(name != null ? name : "", dni);
-    }
+    public List<PatientResponseDTO> getPatientListByNameDni(
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) Long dni) {
 
+        return patientServ.findPatientByNameDni(name != null ? name : "", dni)
+                .stream()
+                .map(PatientMapper::toDto)
+                .toList();
+    }
     @PostMapping("/create")
     public Long savePatient(@RequestBody Patient patient) {
         return patientServ.savePatient(patient);
     }
 
     @PutMapping("/edit/{id}")
-    public Patient editPatient(
+    public ResponseEntity<PatientResponseDTO> editPatient(
             @PathVariable Long id,
             @RequestBody Patient patient) {
-        return patientServ.editPatient(id,patient);
+
+        Patient updatedPatient = patientServ.editPatient(id, patient);
+        return ResponseEntity.ok(PatientMapper.toDto(updatedPatient));
     }
 
 

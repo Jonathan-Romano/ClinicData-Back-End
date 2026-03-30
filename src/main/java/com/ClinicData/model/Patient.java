@@ -21,7 +21,7 @@ public class Patient {
     private String lastName;
     private String email;
     private Long phone;
-    private Long DNI;
+    private Long dni;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<Visit> visitList;

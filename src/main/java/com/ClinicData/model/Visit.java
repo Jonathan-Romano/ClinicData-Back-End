@@ -24,11 +24,9 @@ public class Visit {
     private Patient patient;
     private LocalDate date;
 
-    @Lob // Permite almacenar textos largos
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    @Lob // Permite almacenar textos largos
     @Column(name = "treatment", columnDefinition = "TEXT")
     private String treatment;
 }
