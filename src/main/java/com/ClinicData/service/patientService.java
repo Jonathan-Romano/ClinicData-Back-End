@@ -34,7 +34,7 @@ public class patientService implements IPatientService{
 
     @Override
     public Long savePatient(Patient patient) {
-        if(this.getPatientByDNI(patient.getDNI()) == null){
+        if(this.getPatientByDNI(patient.getDni()) == null){
             return patientRep.save(patient).getId();
         }else {
             return 0L;
