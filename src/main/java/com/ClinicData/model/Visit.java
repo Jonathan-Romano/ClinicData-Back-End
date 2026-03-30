@@ -1,6 +1,6 @@
 package com.ClinicData.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +20,7 @@ public class Visit {
     private Long id;
     @ManyToOne
     @JoinColumn(name = "paciente_id")
-    @JsonBackReference
+    @JsonIgnore
     private Patient patient;
     private LocalDate date;
 
