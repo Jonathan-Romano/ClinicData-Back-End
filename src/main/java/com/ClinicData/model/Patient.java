@@ -20,6 +20,7 @@ public class Patient {
     private String name;
     private String lastName;
     private String email;
+    private String address;
     private Long phone;
     private Long dni;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)

@@ -52,6 +52,7 @@ public class patientService implements IPatientService{
         patientEdit.setName(patient.getName());
         patientEdit.setLastName(patient.getLastName());
         patientEdit.setEmail(patient.getEmail());
+        patientEdit.setAddress(patient.getAddress());
         patientEdit.setPhone(patient.getPhone());
         patientEdit.setDni(patient.getDni());
 

@@ -5,6 +5,7 @@ public class PatientResponseDTO {
     private String name;
     private String lastName;
     private String email;
+    private String address;
     private Long phone;
     private Long dni;
     private List<VisitResponseDTO> visits;
@@ -38,6 +39,10 @@ public class PatientResponseDTO {
         return email;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
     public Long getPhone() {
         return phone;
     }
@@ -64,6 +69,10 @@ public class PatientResponseDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public void setPhone(Long phone) {
